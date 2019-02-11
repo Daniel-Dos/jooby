@@ -20,6 +20,8 @@
     <freemarker.version>2.3.28</freemarker.version>
     <handlebars.version>4.1.2</handlebars.version>
     <jackson.version>2.9.6</jackson.version>
+    <yasson.version>1.0.3</yasson.version>
+    <javax.json.version>1.1.4</javax.json.version>
 
     <!-- hikari -->
     <HikariCP.version>3.2.0</HikariCP.version>
@@ -546,6 +548,19 @@
         <artifactId>maven-antrun-plugin</artifactId>
         <version>${maven-antrun-plugin.version}</version>
       </dependency>
+      
+      <dependency>
+        <groupId>org.eclipse</groupId>
+        <artifactId>yasson</artifactId>
+        <version>${yasson.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.glassfish</groupId>
+    <artifactId>javax.json</artifactId>
+    <version>${javax.json.version}</version>
+</dependency>
+
+
     </dependencies>
   </dependencyManagement>
 
@@ -866,6 +881,11 @@
         <dependency>
           <groupId>org.jooby</groupId>
           <artifactId>jooby-jackson</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>org.jooby</groupId>
+          <artifactId>jooby-yasson</artifactId>
         </dependency>
 
         <dependency>
